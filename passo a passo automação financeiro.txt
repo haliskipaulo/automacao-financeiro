@@ -1,0 +1,13 @@
+abrir a pasta G:\Drives compartilhados\Finnet\Retornos
+
+verificar o prefixo dos arquivos 1 por 1
+
+if EXT:
+	elevor/financeiro/bancos-caixa/conciliacao-bancaria/
+else if COB || CB:
+	elevor/financeiro/banco-caixa/integracoes-bancos-trocas-de-arquivos/cobrança/retorno
+else if PGF:
+	elevor/financeiro/banco-caixa/integracoes-bancos-trocas-de-arquivos/pagamentos/retorno
+else:
+	ctrl+x e ctrl+v na pasta do mês
+
