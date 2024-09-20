@@ -26,22 +26,33 @@ pyautogui.moveTo(2, 500)
 
 sleep(1)
 
+'''
+
 botao_fixar_location = pyautogui.locateCenterOnScreen('botao_fixar.png', confidence=0.8)
 pyautogui.click(botao_fixar_location)
 
 botao_financeiro_location = pyautogui.locateCenterOnScreen('botao_financeiro.png', confidence=0.8)
+sleep(0.2)
 pyautogui.click(botao_financeiro_location)
 
+botao_bancosCaixa_location = pyautogui.locateCenterOnScreen('botao-bancoscaixa.png', confidence=0.8)
+sleep(0.2)
+pyautogui.click(botao_bancosCaixa_location)
+
+PYAUTOGUI FUNCIONANDO
+
 '''
+
 barra_lateral = driver.find_element(By.ID, "ContentPlaceHolder1_asideMasterPage")
-fixar_menu = driver.find_element(By.XPATH, "//*[contains(@class, 'fa') and contains(@class, 'fa-bars')]")
+fixar_menu  = driver.find_element(By.XPATH, "//aside[@id='ContentPlaceHolder1_asideMasterPage']//nav[@id='ContentPlaceHolder1_menuSidebar']//div[@class='profile-picture']//a[@class='fixed-sidebar float-right d-none d-md-inline']")
 
 fixar_menu.click()
 
+sleep(1)
 
-botao_financeiro = driver.find_element(By.CSS_SELECTOR, "em.far.fa-money-bill-alt")
-botao_financeiro.find_element(By.XPATH, "..").click()
+botao_financeiro = driver.find_element(By.CLASS_NAME, "far fa-money-bill-alt")
+
 
 # botao_financeiro.click()
-'''
+
 # driver.quit()
