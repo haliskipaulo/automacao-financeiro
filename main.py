@@ -58,7 +58,7 @@ sleep(1)
 
 def teste():
     pasta = Path(r'G:\Drives compartilhados\Finnet\Retornos')
-    for arquivo in pasta.rglob('*'):
+    for arquivo in pasta.iterdir('*'):
         if arquivo.is_file():
             print(arquivo)
 
