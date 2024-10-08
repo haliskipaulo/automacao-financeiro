@@ -60,7 +60,13 @@ def teste():
     pasta = Path(r'G:\Drives compartilhados\Finnet\Retornos')
     for arquivo in pasta.iterdir():
         if arquivo.is_file():
-            print(arquivo.name)
+            if arquivo.name[:3] == 'EXT':
+            
+            elif (arquivo.name[:2] == 'CB') or (arquivo.name[:3] == 'COB'):
+
+            elif arquivo.name[:3] == 'PGF':
+
+            else:
 
 # MANIPULANDO ARQUIVOS ACIMA
 
