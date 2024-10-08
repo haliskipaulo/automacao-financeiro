@@ -21,8 +21,8 @@ login = driver.find_element(By.ID, "ContentPlaceHolder1_txtLogin")
 senha = driver.find_element(By.ID, "ContentPlaceHolder1_txtSenha")
 botao = driver.find_element(By.ID, "ContentPlaceHolder1_btnLogin")
 
-login.send_keys("mauer.PauloAlexandre") # inserir login
-senha.send_keys("1PlayboiCarti@") # inserir senha
+login.send_keys("") # inserir login
+senha.send_keys("") # inserir senha
 sleep(0.1)
 botao.click()
 
