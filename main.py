@@ -4,7 +4,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
+from pathlib import Path
 import pyautogui
+import os
 
 #   ABRIR A ELEVOR ABAIXO
 
@@ -19,8 +21,8 @@ login = driver.find_element(By.ID, "ContentPlaceHolder1_txtLogin")
 senha = driver.find_element(By.ID, "ContentPlaceHolder1_txtSenha")
 botao = driver.find_element(By.ID, "ContentPlaceHolder1_btnLogin")
 
-login.send_keys("") # inserir login
-senha.send_keys("") # inserir senha
+login.send_keys("mauer.PauloAlexandre") # inserir login
+senha.send_keys("1PlayboiCarti@") # inserir senha
 sleep(0.1)
 botao.click()
 
@@ -51,3 +53,16 @@ sleep(1)
 # driver.quit()
 
 # ABRIR ELEVOR ACIMA
+
+# MANIPULANDO ARQUIVOS ABAIXO
+
+def teste():
+    pasta = Path(r'G:\Drives compartilhados\Finnet\Retornos')
+    for arquivo in pasta.rglob('*'):
+        if arquivo.is_file():
+            print(arquivo)
+
+# MANIPULANDO ARQUIVOS ACIMA
+
+if __name__ == "__main__":
+    teste()
