@@ -7,7 +7,7 @@ from time import sleep
 from pathlib import Path
 import pyautogui
 import os
-
+'''
 #   ABRIR A ELEVOR ABAIXO
 
 driver = webdriver.Firefox()
@@ -53,7 +53,7 @@ sleep(1)
 # driver.quit()
 
 # ABRIR ELEVOR ACIMA
-
+'''
 # MANIPULANDO ARQUIVOS ABAIXO
 
 def teste():
