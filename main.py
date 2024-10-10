@@ -86,7 +86,7 @@ def mk_month():
         return "Dezembro"
 
 def mover_arquivo(mes, arquivo):
-    pasta = Path(r'G:\Drives compartilhados\Finnet\Retornos\{mes}')
+    pasta = Path(rf'G:\Drives compartilhados\Finnet\Retornos\{mes}')
     pasta.mkdir(parents=True, exist_ok=True)
     shutil.move(str(arquivo), str(pasta))
     
@@ -103,9 +103,9 @@ def teste():
             elif arquivo.name[:3] == 'PGF':
                 print("opcao 3")
             else:
-                mover_arquivo(mk_month(), arquivo)
+                mover_arquivo(mk_month, arquivo)
 
 # MANIPULANDO ARQUIVOS ACIMA
 
 if __name__ == "__main__":
-    print(mk_month())
+    teste()
