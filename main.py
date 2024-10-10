@@ -7,6 +7,9 @@ from time import sleep
 from pathlib import Path
 import pyautogui
 import os
+import time
+from datetime import date
+import shutil
 '''
 #   ABRIR A ELEVOR ABAIXO
 
@@ -55,20 +58,54 @@ sleep(1)
 # ABRIR ELEVOR ACIMA
 '''
 # MANIPULANDO ARQUIVOS ABAIXO
+def mk_month():
+    mes_atual = date.today().month
+    if mes_atual == 1:
+        return "Janeiro"
+    elif mes_atual == 2:
+        return "Fevereiro"
+    elif mes_atual == 3:
+        return "Março"
+    elif mes_atual == 4:
+        return "Abril"
+    elif mes_atual == 5:
+        return "Maio"
+    elif mes_atual == 6:
+        return "Junho"
+    elif mes_atual == 7:
+        return "Julho"
+    elif mes_atual == 8:
+        return "Agosto"
+    elif mes_atual == 9:
+        return "Setembro"
+    elif mes_atual == 10:
+        return "Outubro"
+    elif mes_atual == 11:
+        return "Novembro"
+    elif mes_atual == 12:
+        return "Dezembro"
+
+def mover_arquivo(mes, arquivo):
+    pasta = Path(r'G:\Drives compartilhados\Finnet\Retornos\{mes}')
+    pasta.mkdir(parents=True, exist_ok=True)
+    shutil.move(str(arquivo), str(pasta))
+    
 
 def teste():
     pasta = Path(r'G:\Drives compartilhados\Finnet\Retornos')
     for arquivo in pasta.iterdir():
         if arquivo.is_file():
             if arquivo.name[:3] == 'EXT':
-            
+                print("opcao 1")
+
             elif (arquivo.name[:2] == 'CB') or (arquivo.name[:3] == 'COB'):
-
+                print("opcao 2")
             elif arquivo.name[:3] == 'PGF':
-
+                print("opcao 3")
             else:
+                mover_arquivo(mk_month(), arquivo)
 
 # MANIPULANDO ARQUIVOS ACIMA
 
 if __name__ == "__main__":
-    teste()
+    print(mk_month())
