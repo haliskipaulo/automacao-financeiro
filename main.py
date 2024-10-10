@@ -13,7 +13,21 @@ import shutil
 
 #   ABRIR A ELEVOR ABAIXO
 
-def elevor():
+def conciliacao_bancaria():
+    driver = webdriver.Firefox()
+
+    driver.get('https://mauer.2cloud.com.br/ERP360/FN_ConciliacaoBancaria.aspx')
+    driver.maximize_window()
+    sleep(1)
+    login = driver.find_element(By.ID, "ContentPlaceHolder1_txtLogin")
+    senha = driver.find_element(By.ID, "ContentPlaceHolder1_txtSenha")
+    botao = driver.find_element(By.ID, "ContentPlaceHolder1_btnLogin")
+    login.send_keys("") # inserir login
+    senha.send_keys("") # inserir senha
+    sleep(0.1)
+    botao.click()
+
+def open_elevor():
     driver = webdriver.Firefox()
 
     driver.get('https://mauer.2cloud.com.br/ERP360/Login.aspx')
@@ -109,4 +123,4 @@ def teste():
 # MANIPULANDO ARQUIVOS ACIMA
 
 if __name__ == "__main__":
-    teste()
+    conciliacao_bancaria()
