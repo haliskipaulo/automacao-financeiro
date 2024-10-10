@@ -10,7 +10,7 @@ import os
 import time
 from datetime import date
 import shutil
-'''
+
 #   ABRIR A ELEVOR ABAIXO
 
 driver = webdriver.Firefox()
@@ -56,7 +56,7 @@ sleep(1)
 # driver.quit()
 
 # ABRIR ELEVOR ACIMA
-'''
+
 # MANIPULANDO ARQUIVOS ABAIXO
 def mk_month():
     mes_atual = date.today().month
@@ -95,16 +95,14 @@ def teste():
     pasta = Path(r'G:\Drives compartilhados\Finnet\Retornos')
     for arquivo in pasta.iterdir():
         if arquivo.is_file():
-            if arquivo.name[:3] == 'EXT':
+            if arquivo.name.strip()[:3] == 'EXT':
                 print("opcao 1")
-
             elif (arquivo.name.strip()[:2] == 'CB') or (arquivo.name.strip()[:3] == 'COB'):
                 print("opcao 2")
-            elif arquivo.name[:3] == 'PGF':
+            elif arquivo.name.strip()[:3] == 'PGF':
                 print("opcao 3")
             else:
-                mes = mk_month()
-                mover_arquivo(mes, arquivo)
+                mover_arquivo(mk_month(), arquivo)
 
 
 # MANIPULANDO ARQUIVOS ACIMA
