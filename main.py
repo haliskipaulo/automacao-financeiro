@@ -98,13 +98,13 @@ def teste():
             if arquivo.name[:3] == 'EXT':
                 print("opcao 1")
 
-            elif (arquivo.name[:2] == 'CB') or (arquivo.name[:3] == 'COB'):
+            elif (arquivo.name.strip()[:2] == 'CB') or (arquivo.name.strip()[:3] == 'COB'):
                 print("opcao 2")
             elif arquivo.name[:3] == 'PGF':
                 print("opcao 3")
-            else:
-                mes = mk_month()
-                mover_arquivo(mes, arquivo)
+            #else:
+                #mes = mk_month()
+                #mover_arquivo(mes, arquivo)
 
 
 # MANIPULANDO ARQUIVOS ACIMA
