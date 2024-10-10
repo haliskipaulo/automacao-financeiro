@@ -103,8 +103,9 @@ def teste():
             elif arquivo.name[:3] == 'PGF':
                 print("opcao 3")
             else:
-                mes = mk_month
+                mes = mk_month()
                 mover_arquivo(mes, arquivo)
+
 
 # MANIPULANDO ARQUIVOS ACIMA
 
